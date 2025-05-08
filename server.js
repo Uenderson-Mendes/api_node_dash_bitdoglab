@@ -8,8 +8,10 @@ const app = express();
 // Lista de origens permitidas (adicione sua URL de produção aqui se tiver)
 const allowedOrigins = [
   'http://localhost:3000', // React local
-  'https://dashboard-bit.vercel.app' // Substitua pela URL real do seu front
+  'https://dashboard-bit.vercel.app', // Front em produção
+  'http://192.168.3.182:3000', // Front acessado via celular (React em rede local)
 ];
+
 
 // Configuração do CORS
 app.use(cors({
